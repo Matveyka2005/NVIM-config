@@ -1,0 +1,18 @@
+need:
+  -download Node.js:
+  https://dev.to/chand1012/how-to-install-node-on-linux-the-easy-way-3hm8
+    1. sudo pacman -Syu nodejs npm>
+    2. sudo npm i -g npm
+    3. sudo npm i -g n.
+    4. sudo n lts
+    
+  -LSP Pyright:
+  https://www.youtube.com/watch?v=PA7zZNJXJEk&t=806s
+    1. npm install -g pyright
+  
+  При работе с проектом на нужно "git init" дял "pyright"
+  Далее нудно создать "pyrightconfig.json":
+              {
+              "venv": <имя деректории с виртуальным окружениемы>
+              "venvPath": "." - текущая директорияб в которой вирт.окр. ".." директория выше
+              }
