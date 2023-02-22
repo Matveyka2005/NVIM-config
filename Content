@@ -1,9 +1,9 @@
 need:
   -download Node.js:
   https://dev.to/chand1012/how-to-install-node-on-linux-the-easy-way-3hm8
-    1. sudo pacman -Syu nodejs npm>
+    1. sudo pacman -Syu nodejs npm
     2. sudo npm i -g npm
-    3. sudo npm i -g n.
+    3. sudo npm i -g n
     4. sudo n lts
     
   -LSP Pyright:
