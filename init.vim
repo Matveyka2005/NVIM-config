@@ -31,6 +31,7 @@ Plug 'L3MON4D3/LuaSnip'
 
 Plug 'https://github.com/preservim/nerdtree'
 
+
 " color schemas
 Plug 'morhetz/gruvbox'  " colorscheme gruvbox
 Plug 'mhartington/oceanic-next'  " colorscheme OceanicNext
@@ -38,7 +39,7 @@ Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'ayu-theme/ayu-vim'
 
 Plug 'xiyaowong/nvim-transparent'
-
+Plug 'Rigellute/rigel'
 Plug 'Pocco81/auto-save.nvim'
 Plug 'justinmk/vim-sneak'
 
@@ -86,8 +87,17 @@ let g:prettier#quickfix_enabled = 0
 " Turn on vim-sneak
 let g:sneak#label = 1
 
+
+
+
+"""" enable 24bit true color
+"""set termguicolors
+
+"""" enable the theme
+syntax enable
+colorscheme rigel
 "colorscheme gruvbox
-colorscheme OceanicNext
+"colorscheme OceanicNext
 "let g:material_terminal_italics = 1
 " variants: default, palenight, ocean, lighter, darker, default-community,
 "           palenight-community, ocean-community, lighter-community,
@@ -103,7 +113,7 @@ endif
 "colorscheme ayu
 
 " turn off search highlight
-nnoremap ,<space> :nohlsearch<CR>
+nnoremap <space> :nohlsearch<CR>
 
 
 nnoremap <leader>n :NERDTreeFocus<CR>
@@ -112,8 +122,8 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 
-let g:NERDTreeDirArrowExpandable = '?'
-let g:NERDTreeDirArrowCollapsible = '?'
+"let g:NERDTreeDirArrowExpandable = '?'
+"let g:NERDTreeDirArrowCollapsible = '?'
 
 lua << EOF
 -- Set completeopt to have a better completion experience
@@ -127,7 +137,7 @@ local async = require "plenary.async"
 local cmp = require 'cmp'
 cmp.setup {
   completion = {
-    autocomplete = false
+    autocomplete = True
   },
   snippet = {
     expand = function(args)
